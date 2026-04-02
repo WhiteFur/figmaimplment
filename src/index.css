@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --primary-06: #0e1b23;
+  --bg-header: #0e1b23;
+  --bg-04: #0a151d;
+  --bg-05: #091117;
+  --bg-06: #0e1b23;
+  --secondary-01: #f9b800;
+  --secondary-03: #ff7a01;
+  --text-normal: #ffffff;
+  --text-accent-01: #f9b800;
+  --text-heading5: #d8d8d8;
+  --bg-card-hover: rgba(67, 145, 231, 0.9);
+  --tab-text-active-01: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--primary-06);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  max-width: 375px;
+  margin: 0 auto;
+  min-height: 100svh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar for horizontal scroll sections */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Win list auto-scroll */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scroll-up 25s linear infinite;
+}
